@@ -19,7 +19,7 @@ import javax.persistence.Table;
 import gov.igac.general.ladm.entity.Predio.Direccion.Direccion;
 import gov.igac.general.ladm.entity.Predio.InfoPorFuenteJustDerProp.ColUnidadJustDerProp;
 import gov.igac.general.ladm.entity.Predio.InfoPorUebaUnitTerrConst.UEBAUnit;
-import gov.igac.general.ladm.entity.Predio.InforPorColBAUnitInteresado.Derechos;
+import gov.igac.general.ladm.entity.Predio.InforPorColBAUnitInteresado.Derecho;
 import gov.igac.general.ladm.entity.Tramite.TramitePredio;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -95,13 +95,13 @@ public class Predio {
 	@JoinColumn(name = "CATASTRO")//nuevo
     private Catastro catastro;
 
-	@ManyToOne
+	/*@ManyToOne
 	@JoinColumn(name = "csrv_gestorcatastral")//nuevo
-    private GestorCatastral gestorCatastral;
+    private GestorCatastral gestorCatastral;*/
 
-	@ManyToOne
+	/*@ManyToOne
 	@JoinColumn(name = "csrv_operadorcatastral")//nuevo
-    private OperadorCatastral operadorCatastral;
+    private OperadorCatastral operadorCatastral;*/
 
 	@Column(name = "NOMBRE")
     private String nombre;
@@ -122,7 +122,7 @@ public class Predio {
 	private List<UEBAUnit> uebaUnit;
 
 	@OneToMany(mappedBy="predioC", cascade=CascadeType.MERGE, fetch=FetchType.LAZY) 
-	private List<Derechos> derechos;
+	private List<Derecho> derechos;
 	
 	@OneToMany(mappedBy="predioD", cascade=CascadeType.MERGE, fetch=FetchType.LAZY) 
 	private List<Direccion> direccion;//tipodir es estructurada (se llena todo) o no estructurada (solo se diligencia nombre predio)

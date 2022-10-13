@@ -18,7 +18,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import gov.igac.general.ladm.entity.Predio.InforPorColBAUnitInteresado.Derechos;
+import gov.igac.general.ladm.entity.Predio.InforPorColBAUnitInteresado.Derecho;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -82,5 +82,5 @@ public class Interesado {
 
 	@JsonIgnore
 	@OneToMany(mappedBy="interesado", cascade=CascadeType.MERGE, fetch=FetchType.LAZY)
-	private List<Derechos> derechos;
+	private List<Derecho> derechos;
 }

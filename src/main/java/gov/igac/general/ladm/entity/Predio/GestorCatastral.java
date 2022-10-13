@@ -46,7 +46,7 @@ public class GestorCatastral {
 	@Column(name = "FECHA_INICIO_PRESTACION_SERVICIO")//nuevo
 	private LocalDateTime fechaInicioPrestacionServicio;
 
-	@JsonIgnore
+	/*@JsonIgnore
 	@OneToMany(mappedBy="gestorCatastral", cascade=CascadeType.MERGE, fetch=FetchType.LAZY)
-	private List<Predio> predio = new ArrayList<>();
+	private List<Predio> predio = new ArrayList<>();*/
 }

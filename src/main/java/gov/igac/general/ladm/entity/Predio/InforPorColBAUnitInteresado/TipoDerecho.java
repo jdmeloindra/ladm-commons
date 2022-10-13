@@ -56,5 +56,5 @@ public class TipoDerecho {
 
 	@JsonIgnore
 	@OneToMany(mappedBy="tipoDerecho", cascade=CascadeType.MERGE, fetch=FetchType.LAZY)
-	private List<Derechos> derechos;
+	private List<Derecho> derechos;
 }

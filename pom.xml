@@ -14,7 +14,7 @@
 	<description>Commons, dto and mappers for ladm db</description>
 	<properties>
 		<java.version>1.8</java.version>
-		<org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
+		<org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -58,5 +58,29 @@
 		</dependency>
 	</dependencies>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+							<version>1.18.22</version>
+						</path>
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>${org.mapstruct.version}</version>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

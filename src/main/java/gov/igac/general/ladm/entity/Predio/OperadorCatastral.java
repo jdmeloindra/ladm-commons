@@ -42,7 +42,7 @@ public class OperadorCatastral {
 	@Column(name = "NIT_OPERADOR_CATASTRAL")
 	private String nitOperadorCatastral;
 
-	@JsonIgnore
+	/*@JsonIgnore
 	@OneToMany(mappedBy="operadorCatastral", cascade=CascadeType.MERGE, fetch=FetchType.LAZY)
-	private List<Predio> predio = new ArrayList<>();
+	private List<Predio> predio = new ArrayList<>();*/
 }

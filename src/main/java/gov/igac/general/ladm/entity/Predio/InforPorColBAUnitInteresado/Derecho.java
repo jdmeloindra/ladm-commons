@@ -35,7 +35,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "CSRV_DERECHO", schema="SNC_LADM")
-public class Derechos {
+public class Derecho {
 
 	@Id
     @Column(name = "T_ID")
